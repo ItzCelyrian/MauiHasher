@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hasher.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Entry x:Name="Eingabe"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="10"
+                   MinimumWidthRequest="200"
+                   Placeholder="Eingabe">
+            </Entry>
+
+            <Grid RowDefinitions="*,*"
+                  ColumnDefinitions="*,*"
+                  HorizontalOptions="CenterAndExpand">
+
+                <Button x:Name="MD5"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="MD5"
+                        SemanticProperties.Hint="Berechnet den MD5 Hash der Eingabe"
+                        Clicked="MD5Hash"/>
+
+                <Button x:Name="SHA256"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="SHA-256"
+                        SemanticProperties.Hint="Berechnet den SHA-256 Hash der Eingabe"
+                        Clicked="SHA256Hash"/>
+
+                <Button x:Name="SHA384"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="SHA-384"
+                        SemanticProperties.Hint="Berechnet den SHA-384 Hash der Eingabe"
+                        Clicked="SHA384Hash"/>
+
+                <Button x:Name="SHA512"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="SHA-512"
+                        SemanticProperties.Hint="Berechnet den SHA-512 Hash der Eingabe"
+                        Clicked="SHA512Hash"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
